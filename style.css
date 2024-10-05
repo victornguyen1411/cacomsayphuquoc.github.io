@@ -1,0 +1,623 @@
+@charset "UTF-8";
+/*
+Theme Name: Good Wine
+Theme URI: https://good-wine.webhelpagency.com/
+Author: Web Help Agency
+Author URI: https://webhelpagency.com/
+Description: Experience the taste of success with Good Wine – the ultimate WordPress theme for winery shops. Elevate your online presence with seamless eCommerce functionality, stunning block styles, and intricate patterns, all designed to showcase your finest wines in elegance and style. Uncork the potential of your winery with Good Wine today.
+Requires at least: 6.1
+Tested up to: 6.3
+Requires PHP: 5.6
+Version: 1.0.3
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: good-wine
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, accessibility-ready, blog, e-commerce
+*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+/**
+ * General Styles
+ */
+* {
+  transition: all 0.3s ease; }
+
+.is-style-gwn-w100 {
+  width: 100%; }
+
+@media screen and (max-width: 475px) {
+  .d-none-xs {
+    display: none !important; } }
+/* Header Search */
+@media screen and (max-width: 1024px) {
+  .wp-block-search {
+    display: none; } }
+
+.wp-block-search__input {
+  min-width: 30rem; }
+  @media screen and (max-width: 1200px) {
+    .wp-block-search__input {
+      min-width: 100%; } }
+
+.wp-block-search__button {
+  padding: calc(0.3rem) calc(1.333rem); }
+
+/* Header Mini cart */
+.wc-block-mini-cart__badge {
+  background-color: var(--wp--preset--color--primary) !important;
+  color: var(--wp--preset--color--contrast); }
+
+/* Has background remove paddings */
+.wp-block-group.has-background,
+.wp-block-group.has-background-gradient,
+.wp-block-group.has-background-video,
+.wp-block-group.has-background-image,
+.wp-block-group.has-background-pattern,
+p.has-background {
+  padding: 0; }
+
+/* Phone Link color */
+p.has-base-color.has-text-color a {
+  color: var(--wp--preset--color--base);
+  text-decoration: none; }
+  p.has-base-color.has-text-color a .icon-phone {
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    margin-top: 3px;
+    margin-left: -22px; }
+
+/* Paragraph discount */
+p.has-background.is-style-gwn-discount, .is-style-gwn-discount {
+  position: absolute;
+  right: -4.5rem;
+  top: 0;
+  transform: rotate(45deg);
+  padding: 1rem 5rem; }
+
+/* Cover Block Height */
+.is-style-gwn-small {
+  min-height: 160px; }
+
+/* Woocommerce product grid template */
+.wc-block-grid__products .wc-block-grid__product, .wc-block-grid__products .wc-block-grid__product, .wc-block-grid__products .product, .products-block-post-template .wc-block-grid__product, .products-block-post-template .wc-block-grid__product, .products-block-post-template .product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: var(--wp--preset--spacing--10); }
+.wc-block-grid__products .wc-block-grid__product-link, .wc-block-grid__products .wc-block-components-product-image, .products-block-post-template .wc-block-grid__product-link, .products-block-post-template .wc-block-components-product-image {
+  width: 100%;
+  text-decoration: none; }
+.wc-block-grid__products .wc-block-grid__product-title, .wc-block-grid__products .wp-block-post-title, .products-block-post-template .wc-block-grid__product-title, .products-block-post-template .wp-block-post-title {
+  width: 100%;
+  display: block;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  text-decoration: none; }
+.wc-block-grid__products .wc-block-grid__product-add-to-cart, .wc-block-grid__products .wp-block-button .wp-block-button__link, .wc-block-grid__products .wp-block-button, .products-block-post-template .wc-block-grid__product-add-to-cart, .products-block-post-template .wp-block-button .wp-block-button__link, .products-block-post-template .wp-block-button {
+  align-self: center;
+  margin: 0 !important; }
+.wc-block-grid__products .wp-block-button .wp-block-button__link:visited, .products-block-post-template .wp-block-button .wp-block-button__link:visited {
+  color: var(--wp--preset--color--base); }
+
+/* Woocommerce price align */
+.wp-block-woocommerce-product-price {
+  display: flex;
+  margin-bottom: 0 !important; }
+
+.price, .wc-block-grid__product-price {
+  display: flex !important;
+  flex-direction: column;
+  align-self: center;
+  margin: 0 !important;
+  font-size: 1.5rem !important;
+  line-height: 1;
+  font-weight: 300;
+  color: var(--wp--preset--color--contrast) !important; }
+  .price del, .wc-block-grid__product-price del {
+    margin-right: 0 !important;
+    font-size: 1.2rem !important;
+    color: var(--wp--preset--color--contrast) !important;
+    text-decoration: none; }
+  .price ins, .wc-block-grid__product-price ins {
+    margin-left: 0 !important;
+    height: 23px;
+    text-decoration: none;
+    color: var(--wp--preset--color--primary) !important; }
+
+/* Woocommerce onsale badge */
+.woocommerce span.onsale, .wc-block-grid__product-onsale span {
+  min-height: 3.236em;
+  min-width: 3.236em;
+  padding: 0.202em;
+  font-size: 1em;
+  font-weight: 700;
+  position: absolute;
+  text-align: center;
+  line-height: 3.236;
+  top: -0.5em;
+  left: -0.5em;
+  margin: 0;
+  border-radius: 100%;
+  background-color: #b3af54;
+  color: #fff;
+  font-size: .857em;
+  z-index: 9;
+  background-color: var(--wp--preset--color--primary) !important; }
+
+/* Woocommerce sorting select */
+.wc-block-sort-select__select {
+  float: right; }
+
+/* Woocommerce archive grid product borders */
+@media screen and (min-width: 601px) {
+  .is-style-gwn-product-borders .has-1-columns .wc-block-grid__product {
+    padding: var(--wp--preset--spacing--10); }
+    .is-style-gwn-product-borders .has-1-columns .wc-block-grid__product:before {
+      position: absolute;
+      content: '';
+      top: -1rem;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: none; }
+    .is-style-gwn-product-borders .has-1-columns .wc-block-grid__product:not(.is-style-gwn-product-borders .has-1-columns .wc-block-grid__product:nth-child(1n+1)):before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -0.5rem;
+      width: 1px;
+      height: 100%;
+      background: #f0f0f0; }
+    .is-style-gwn-product-borders .has-1-columns .wc-block-grid__product:nth-child(1n+1):after {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+      width: 110%;
+      height: 1px;
+      background: #f0f0f0; }
+
+  .is-style-gwn-product-borders .has-2-columns .wc-block-grid__product {
+    padding: var(--wp--preset--spacing--10); }
+    .is-style-gwn-product-borders .has-2-columns .wc-block-grid__product:before {
+      position: absolute;
+      content: '';
+      top: -1rem;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: none; }
+    .is-style-gwn-product-borders .has-2-columns .wc-block-grid__product:not(.is-style-gwn-product-borders .has-2-columns .wc-block-grid__product:nth-child(2n+1)):before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -0.5rem;
+      width: 1px;
+      height: 100%;
+      background: #f0f0f0; }
+    .is-style-gwn-product-borders .has-2-columns .wc-block-grid__product:nth-child(2n+1):after {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+      width: 220%;
+      height: 1px;
+      background: #f0f0f0; }
+
+  .is-style-gwn-product-borders .has-3-columns .wc-block-grid__product {
+    padding: var(--wp--preset--spacing--10); }
+    .is-style-gwn-product-borders .has-3-columns .wc-block-grid__product:before {
+      position: absolute;
+      content: '';
+      top: -1rem;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: none; }
+    .is-style-gwn-product-borders .has-3-columns .wc-block-grid__product:not(.is-style-gwn-product-borders .has-3-columns .wc-block-grid__product:nth-child(3n+1)):before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -0.5rem;
+      width: 1px;
+      height: 100%;
+      background: #f0f0f0; }
+    .is-style-gwn-product-borders .has-3-columns .wc-block-grid__product:nth-child(3n+1):after {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+      width: 330%;
+      height: 1px;
+      background: #f0f0f0; }
+
+  .is-style-gwn-product-borders .has-4-columns .wc-block-grid__product {
+    padding: var(--wp--preset--spacing--10); }
+    .is-style-gwn-product-borders .has-4-columns .wc-block-grid__product:before {
+      position: absolute;
+      content: '';
+      top: -1rem;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: none; }
+    .is-style-gwn-product-borders .has-4-columns .wc-block-grid__product:not(.is-style-gwn-product-borders .has-4-columns .wc-block-grid__product:nth-child(4n+1)):before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -0.5rem;
+      width: 1px;
+      height: 100%;
+      background: #f0f0f0; }
+    .is-style-gwn-product-borders .has-4-columns .wc-block-grid__product:nth-child(4n+1):after {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+      width: 440%;
+      height: 1px;
+      background: #f0f0f0; }
+
+  .is-style-gwn-product-borders .has-5-columns .wc-block-grid__product {
+    padding: var(--wp--preset--spacing--10); }
+    .is-style-gwn-product-borders .has-5-columns .wc-block-grid__product:before {
+      position: absolute;
+      content: '';
+      top: -1rem;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: none; }
+    .is-style-gwn-product-borders .has-5-columns .wc-block-grid__product:not(.is-style-gwn-product-borders .has-5-columns .wc-block-grid__product:nth-child(5n+1)):before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -0.5rem;
+      width: 1px;
+      height: 100%;
+      background: #f0f0f0; }
+    .is-style-gwn-product-borders .has-5-columns .wc-block-grid__product:nth-child(5n+1):after {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+      width: 550%;
+      height: 1px;
+      background: #f0f0f0; }
+
+  .is-style-gwn-product-borders .has-6-columns .wc-block-grid__product {
+    padding: var(--wp--preset--spacing--10); }
+    .is-style-gwn-product-borders .has-6-columns .wc-block-grid__product:before {
+      position: absolute;
+      content: '';
+      top: -1rem;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: none; }
+    .is-style-gwn-product-borders .has-6-columns .wc-block-grid__product:not(.is-style-gwn-product-borders .has-6-columns .wc-block-grid__product:nth-child(6n+1)):before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -0.5rem;
+      width: 1px;
+      height: 100%;
+      background: #f0f0f0; }
+    .is-style-gwn-product-borders .has-6-columns .wc-block-grid__product:nth-child(6n+1):after {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+      width: 660%;
+      height: 1px;
+      background: #f0f0f0; } }
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem; }
